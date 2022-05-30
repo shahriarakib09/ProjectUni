@@ -1,0 +1,443 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{461FE287-FA8C-471B-8DF9-4A90BA26E407}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>projectuni1</RootNamespace>
+    <AssemblyName>projectuni1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.21.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.21.4.0\lib\net462\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.6.0.0\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.AccessControl, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.AccessControl.6.0.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Permissions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Permissions.6.0.0\lib\net461\System.Security.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Text.Encodings.Web, Version=5.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.5.0.1\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.5.0.2\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCourse.Designer.cs">
+      <DependentUpon>AddCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddStudent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddStudent.Designer.cs">
+      <DependentUpon>AddStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddStuffs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddStuffs.Designer.cs">
+      <DependentUpon>AddStuffs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddTeacher.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddTeacher.Designer.cs">
+      <DependentUpon>AddTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminDelete.Designer.cs">
+      <DependentUpon>AdminDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminUpdate.Designer.cs">
+      <DependentUpon>AdminUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssignCourse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AssignCourse.designer.cs">
+      <DependentUpon>AssignCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\DataAccess.cs" />
+    <Compile Include="DataAccessLayer\Entities\Admin.cs" />
+    <Compile Include="DataAccessLayer\Entities\Student.cs" />
+    <Compile Include="DataAccessLayer\Entities\Stuff.cs" />
+    <Compile Include="DataAccessLayer\Entities\Teacher.cs" />
+    <Compile Include="AdminPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPage.Designer.cs">
+      <DependentUpon>AdminPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteStudent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DeleteStudent.Designer.cs">
+      <DependentUpon>DeleteStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteStuff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DeleteStuff.Designer.cs">
+      <DependentUpon>DeleteStuff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteTeacher.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DeleteTeacher.Designer.cs">
+      <DependentUpon>DeleteTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditStaff.Designer.cs">
+      <DependentUpon>EditStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditStudent.Designer.cs">
+      <DependentUpon>EditStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditTeacher.Designer.cs">
+      <DependentUpon>EditTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="files.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="files.Designer.cs">
+      <DependentUpon>files.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginStudent.Designer.cs">
+      <DependentUpon>LoginStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginStuff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginStuff.Designer.cs">
+      <DependentUpon>LoginStuff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginTeacher.Designer.cs">
+      <DependentUpon>LoginTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration.Designer.cs">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentCourseRequest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StudentCourseRequest.Designer.cs">
+      <DependentUpon>StudentCourseRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentMarks.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StudentMarks.Designer.cs">
+      <DependentUpon>StudentMarks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StudentPage.Designer.cs">
+      <DependentUpon>StudentPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentPanel.Designer.cs">
+      <DependentUpon>StudentPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StuffPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StuffPage.Designer.cs">
+      <DependentUpon>StuffPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StuffPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StuffPanel.designer.cs">
+      <DependentUpon>StuffPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TeacherPage.Designer.cs">
+      <DependentUpon>TeacherPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teachers Panel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teachers Panel.Designer.cs">
+      <DependentUpon>Teachers Panel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateStudent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UpdateStudent.Designer.cs">
+      <DependentUpon>UpdateStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateStuff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UpdateStuff.Designer.cs">
+      <DependentUpon>UpdateStuff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateTeacher.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UpdateTeacher.Designer.cs">
+      <DependentUpon>UpdateTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UploadFile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UploadFile.Designer.cs">
+      <DependentUpon>UploadFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UploadGrade.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UploadGrade.Designer.cs">
+      <DependentUpon>UploadGrade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewCourseRequest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewCourseRequest.designer.cs">
+      <DependentUpon>ViewCourseRequest.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddCourse.resx">
+      <DependentUpon>AddCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddStudent.resx">
+      <DependentUpon>AddStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddStuffs.resx">
+      <DependentUpon>AddStuffs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTeacher.resx">
+      <DependentUpon>AddTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminDelete.resx">
+      <DependentUpon>AdminDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPage.resx">
+      <DependentUpon>AdminPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUpdate.resx">
+      <DependentUpon>AdminUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssignCourse.resx">
+      <DependentUpon>AssignCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteStudent.resx">
+      <DependentUpon>DeleteStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteStuff.resx">
+      <DependentUpon>DeleteStuff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteTeacher.resx">
+      <DependentUpon>DeleteTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditStaff.resx">
+      <DependentUpon>EditStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditStudent.resx">
+      <DependentUpon>EditStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditTeacher.resx">
+      <DependentUpon>EditTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="files.resx">
+      <DependentUpon>files.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginStudent.resx">
+      <DependentUpon>LoginStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginStuff.resx">
+      <DependentUpon>LoginStuff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginTeacher.resx">
+      <DependentUpon>LoginTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Registration.resx">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentCourseRequest.resx">
+      <DependentUpon>StudentCourseRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentMarks.resx">
+      <DependentUpon>StudentMarks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentPage.resx">
+      <DependentUpon>StudentPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentPanel.resx">
+      <DependentUpon>StudentPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StuffPage.resx">
+      <DependentUpon>StuffPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StuffPanel.resx">
+      <DependentUpon>StuffPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherPage.resx">
+      <DependentUpon>TeacherPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teachers Panel.resx">
+      <DependentUpon>Teachers Panel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateStudent.resx">
+      <DependentUpon>UpdateStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateStuff.resx">
+      <DependentUpon>UpdateStuff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateTeacher.resx">
+      <DependentUpon>UpdateTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UploadFile.resx">
+      <DependentUpon>UploadFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UploadGrade.resx">
+      <DependentUpon>UploadGrade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewCourseRequest.resx">
+      <DependentUpon>ViewCourseRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Oracle.DataAccess.Common.Configuration.Section.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Oracle.ManagedDataAccess.Client.Configuration.Section.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
